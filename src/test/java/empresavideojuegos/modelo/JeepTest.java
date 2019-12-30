@@ -12,7 +12,7 @@ public class JeepTest {
 
     @Before
     public void setUp() throws Exception {
-        j = new Jeep("carro",5);
+        j = new Jeep("carro",5,1);
     }
 
     @Test

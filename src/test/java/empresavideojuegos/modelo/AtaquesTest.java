@@ -19,14 +19,14 @@ public class AtaquesTest {
 
     @Before
     public void setUp() throws Exception {
-        cruseroAlabama = new Vehiculo("barco", 2);
-        bombasrderoB56 = new Vehiculo("avion", 1);
-        camionHl = new Vehiculo("avion", 1);
-        motoHarley = new Vehiculo("avion", 1);
-        jeep = new Vehiculo("avion", 1);
-        portaAviones = new Vehiculo("avion", 1);
-        speedFighter = new Vehiculo("avion", 1);
-        tanqueSherman = new Vehiculo("avion", 1);
+        cruseroAlabama = new Vehiculo("barco", 2,1);
+        bombasrderoB56 = new Vehiculo("avion", 1,1);
+        camionHl = new Vehiculo("avion", 1,1);
+        motoHarley = new Vehiculo("avion", 1,1);
+        jeep = new Vehiculo("avion", 1,1);
+        portaAviones = new Vehiculo("avion", 1,1);
+        speedFighter = new Vehiculo("avion", 1,1);
+        tanqueSherman = new Vehiculo("avion", 1,1);
 
     }
 
@@ -43,5 +43,20 @@ public class AtaquesTest {
         int totalPersonas = nbombasrderoB56+ncamionHl+ncruseroAlabama+njeep+nmotoHarley+nportaAviones+nspeedFighter+ntanqueSherman;
 
         Assert.assertEquals("el dato no es el esperado ",9, totalPersonas);
+    }
+
+    @Test
+    public void cantidadToneladas() {
+        int ncruseroAlabama = cruseroAlabama.getPesoCapacidad();
+        int nbombasrderoB56 = bombasrderoB56.getPesoCapacidad();
+        int ncamionHl = camionHl.getPesoCapacidad();
+        int nmotoHarley = motoHarley.getPesoCapacidad();
+        int njeep = jeep.getPesoCapacidad();
+        int nportaAviones = portaAviones.getPesoCapacidad();
+        int nspeedFighter = speedFighter.getPesoCapacidad();
+        int ntanqueSherman = tanqueSherman.getPesoCapacidad();
+        int totalToneladas = nbombasrderoB56+ncamionHl+ncruseroAlabama+njeep+nmotoHarley+nportaAviones+nspeedFighter+ntanqueSherman;
+
+        Assert.assertEquals("el dato no es el esperado ",8, totalToneladas);
     }
 }

@@ -12,7 +12,7 @@ public class BombarderoB56Test {
 
     @Before
     public void setUp() throws Exception {
-        b = new BombarderoB56("avion",1);
+        b = new BombarderoB56("avion",1,1);
     }
 
     @Test

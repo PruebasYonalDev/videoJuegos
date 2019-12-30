@@ -12,7 +12,7 @@ public class SpeedFighterTest {
 
     @Before
     public void setUp() throws Exception {
-        s = new SpeedFighter("avion",1);
+        s = new SpeedFighter("avion",1,1);
     }
 
     @Test

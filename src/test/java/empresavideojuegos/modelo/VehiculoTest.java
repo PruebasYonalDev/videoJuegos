@@ -12,7 +12,7 @@ public class VehiculoTest {
 
     @Before
     public void setUp() throws Exception {
-        v = new Vehiculo("tipo",1);
+        v = new Vehiculo("tipo",1,1);
     }
 
     @Test

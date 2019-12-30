@@ -12,7 +12,7 @@ public class HarleyTest {
 
     @Before
     public void setUp() throws Exception {
-        h = new Harley("moto",2);
+        h = new Harley("moto",2,1);
     }
 
     @Test
