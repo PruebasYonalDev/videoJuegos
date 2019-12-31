@@ -12,7 +12,7 @@ public class PortaAvionesTest {
 
     @Before
     public void setUp() throws Exception {
-        p = new PortaAviones("avion", 2000,1);
+        p = new PortaAviones("avion", 2000,1,1);
     }
 
     @Test

@@ -12,7 +12,7 @@ public class CruseroAlabamaTest {
 
     @Before
     public void setUp() throws Exception {
-        c = new CruseroAlabama("barco",200,1);
+        c = new CruseroAlabama("barco",200,1,1);
     }
 
     @Test

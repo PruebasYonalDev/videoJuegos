@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class AtaquesTest {
+public class AtaqueTest {
 
     Vehiculo cruseroAlabama;
     Vehiculo bombasrderoB56;
@@ -19,14 +19,14 @@ public class AtaquesTest {
 
     @Before
     public void setUp() throws Exception {
-        cruseroAlabama = new Vehiculo("barco", 2,1);
-        bombasrderoB56 = new Vehiculo("avion", 1,1);
-        camionHl = new Vehiculo("avion", 1,1);
-        motoHarley = new Vehiculo("avion", 1,1);
-        jeep = new Vehiculo("avion", 1,1);
-        portaAviones = new Vehiculo("avion", 1,1);
-        speedFighter = new Vehiculo("avion", 1,1);
-        tanqueSherman = new Vehiculo("avion", 1,1);
+        cruseroAlabama = new Vehiculo("barco", 2,1,1);
+        bombasrderoB56 = new Vehiculo("avion", 1,1,1);
+        camionHl = new Vehiculo("avion", 1,1,1);
+        motoHarley = new Vehiculo("avion", 1,1,1);
+        jeep = new Vehiculo("avion", 1,1,1);
+        portaAviones = new Vehiculo("avion", 1,1,1);
+        speedFighter = new Vehiculo("avion", 1,1,1);
+        tanqueSherman = new Vehiculo("avion", 1,1,1);
 
     }
 
@@ -58,5 +58,9 @@ public class AtaquesTest {
         int totalToneladas = nbombasrderoB56+ncamionHl+ncruseroAlabama+njeep+nmotoHarley+nportaAviones+nspeedFighter+ntanqueSherman;
 
         Assert.assertEquals("el dato no es el esperado ",8, totalToneladas);
+    }
+
+    @Test
+    public void ataqueMasivoAmetralladora() {
     }
 }

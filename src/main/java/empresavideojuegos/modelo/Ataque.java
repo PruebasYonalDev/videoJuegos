@@ -1,15 +1,35 @@
 package empresavideojuegos.modelo;
 
-public class Ataques {
+import java.util.ArrayList;
 
-    Vehiculo cruseroAlabama = new Vehiculo("barco", 2, 2000);
-    Vehiculo bombasrderoB56 = new Vehiculo("avion", 1, 20);
-    Vehiculo camionHl = new Vehiculo("avion", 1, 5);
-    Vehiculo motoHarley = new Vehiculo("avion", 1, 0);
-    Vehiculo jeep = new Vehiculo("avion", 1,0);
-    Vehiculo portaAviones = new Vehiculo("avion", 1, 3000);
-    Vehiculo speedFighter = new Vehiculo("avion", 1,1);
-    Vehiculo tanqueSherman = new Vehiculo("avion", 1,1);
+public class Ataque {
+
+    Vehiculo cruseroAlabama = new Vehiculo("barco", 2, 2000,3);
+    Vehiculo bombasrderoB56 = new Vehiculo("avion", 1, 20,3);
+    Vehiculo camionHl = new Vehiculo("avion", 1, 5,0);
+    Vehiculo motoHarley = new Vehiculo("avion", 1, 0,0);
+    Vehiculo jeep = new Vehiculo("avion", 1,0,1);
+    Vehiculo portaAviones = new Vehiculo("avion", 1, 3000,0);
+    Vehiculo speedFighter = new Vehiculo("avion", 1,1,1);
+    Vehiculo tanqueSherman = new Vehiculo("avion", 1,1,1);
+
+    public void ataqueMasivoAmetralladora() {
+
+        PortaAviones portaaviones = new PortaAviones("avion", 1, 3000,1);
+        SpeedFighter s = new SpeedFighter("avion", 1, 3000,2);
+        TanqueSherman t = new TanqueSherman("avion", 1, 3000,3);
+
+
+        ArrayList<Rafagable> vehiculosRafagabla = new ArrayList<Rafagable>();
+        vehiculosRafagabla.add(portaaviones);
+        vehiculosRafagabla.add(s);
+        vehiculosRafagabla.add(t);
+
+        for (Rafagable vr :
+                vehiculosRafagabla) {
+            vr.dorafaga();
+        }
+    }
 
     public int cantidadPersonas() {
 
@@ -43,6 +63,10 @@ public class Ataques {
         return totaltoneladas;
     }
 
+    public static void main(String[] args) {
+        Ataque a = new Ataque();
+        a.ataqueMasivoAmetralladora();
+    }
 
 
 }
