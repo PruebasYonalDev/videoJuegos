@@ -82,11 +82,5 @@ public class Ataque {
         return totaltoneladas;
     }
 
-    public static void main(String[] args) {
-        Ataque a = new Ataque();
-        a.ataqueMasivoAmetralladora();
-        a.ataqueMasivoBombarderos();
-    }
-
 
 }
