@@ -1,6 +1,6 @@
 package empresavideojuegos.modelo;
 
-public class SpeedFighter extends Vehiculo implements Rafagable {
+public class SpeedFighter extends Vehiculo implements Rafagable, Bombardable {
     public SpeedFighter(String tipoVehiculo, int numeroPersonas, int pesoCapacidad, int municion) {
         super(tipoVehiculo, numeroPersonas, pesoCapacidad, municion);
     }
@@ -12,5 +12,14 @@ public class SpeedFighter extends Vehiculo implements Rafagable {
         }
         System.out.println("Rafaga de ametralladora desde SPEED FIGHTER");
         m--;
+    }
+
+    public void doBombardear() {
+        int m = super.getMunicion();
+        m--;
+        if (m == 0){
+            System.out.println("tu municion ha terminado SPEED FIGHTER ");
+        }
+        System.out.println("bombardeo desde SPEED FIGHTER");
     }
 }

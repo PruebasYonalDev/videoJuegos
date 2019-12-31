@@ -15,9 +15,9 @@ public class Ataque {
 
     public void ataqueMasivoAmetralladora() {
 
-        PortaAviones portaaviones = new PortaAviones("avion", 1, 3000,1);
-        SpeedFighter s = new SpeedFighter("avion", 1, 3000,2);
-        TanqueSherman t = new TanqueSherman("avion", 1, 3000,3);
+        PortaAviones portaaviones = new PortaAviones("barco", 200, 50,1);
+        SpeedFighter s = new SpeedFighter("avion", 1, 1,2);
+        TanqueSherman t = new TanqueSherman("tanque", 1, 2,3);
 
 
         ArrayList<Rafagable> vehiculosRafagabla = new ArrayList<Rafagable>();
@@ -28,6 +28,25 @@ public class Ataque {
         for (Rafagable vr :
                 vehiculosRafagabla) {
             vr.dorafaga();
+        }
+    }
+
+    public void ataqueMasivoBombarderos() {
+        PortaAviones portaaviones = new PortaAviones("barco", 200, 50,3);
+        SpeedFighter s = new SpeedFighter("avion", 1, 1,2);
+        TanqueSherman t = new TanqueSherman("tanque", 1, 2,3);
+        BombarderoB56 b = new BombarderoB56("avion", 1, 1,3);
+
+
+        ArrayList<Bombardable> vehiculosBombardable = new ArrayList<Bombardable>();
+        vehiculosBombardable.add(portaaviones);
+        vehiculosBombardable.add(s);
+        vehiculosBombardable.add(t);
+        vehiculosBombardable.add(b);
+
+        for (Bombardable vr :
+                vehiculosBombardable) {
+            vr.doBombardear();
         }
     }
 
@@ -66,6 +85,7 @@ public class Ataque {
     public static void main(String[] args) {
         Ataque a = new Ataque();
         a.ataqueMasivoAmetralladora();
+        a.ataqueMasivoBombarderos();
     }
 
 
